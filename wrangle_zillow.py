@@ -118,4 +118,4 @@ def wrangle_zillow(df):
     df = df.drop(columns=['propertylandusetypeid', 'heatingorsystemtypeid', 'id', 'calculatedbathnbr', 'finishedsquarefeet12',\
                       'fullbathcnt', 'propertycountylandusecode', 'propertyzoningdesc', 'censustractandblock'])
     
-    
+    return df
