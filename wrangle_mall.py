@@ -104,7 +104,7 @@ def add_lower_outlier_columns(df, k=1.5):
 def remove_outliers(df, col_list, k=1.5):
     for col in col_list:
         
-        q1, q3 = s.quartile([0.25, 0.75])
+        q1, q3 = df[col].quantile([0.25, 0.75])
         iqr = q3 - q1
     
         upper_bound = q3 + k * iqr
@@ -160,3 +160,6 @@ def min_max_scale(train, validate, test, numeric_cols):
     )
     return train_scaled, validate_scaled, test_scaled
 
+def prepare_mall(df):
+    
+    
